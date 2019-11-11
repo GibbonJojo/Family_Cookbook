@@ -1,0 +1,7 @@
+.vscode/
+.idea/
+
+flask/__pycache__/
+flask/backupstuff/
+flask/venv/
+flask/SECRETS.py

@@ -1,13 +1,13 @@
 
 # ! TODO BEFORE PRODUCTION
 # TODO: Impressum & Contact
-# TODO: Split routes in different files for readibility
+# TODO: Split routes in different files for readability
 # TODO: Picture upload and picture on recipe site
 # TODO: Shared site for category and type
 # TODO: Edit function - NOT WORKING PROPERLY YET
 # TODO: Make Edit Route unaccessible
 # TODO: "Warenkorb/Einkaufsliste"
-# TODO: Dont allow multiple usernames or emails! => Check if it works
+# TODO: Dont allow multiple usernames or emails! => Implemented, but have to check if it works
 
 # TODO: Better search function
     # TODO: Filter for category and type
