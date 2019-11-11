@@ -1,0 +1,46 @@
+{% extends "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block body %}
+<div class="container">
+    <p></p>
+    <form method="POST" action="" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <dl> <b>{{ form.name.label }}</b>
+                        {{ form.name }}</dl>
+
+                    <dl><p>Bildupload funktioniert noch nicht!</p>
+                        <b>{{ form.picture.label }}</b>
+                        <div class="custom-file">
+                            {{ form.picture }}
+                        <label class="custom-file-label" for="input">Datei auswählen</label>
+                        </div>
+                    </dl>
+
+                    <b>Rezept</b>
+
+                    <dl>{{ form.ingreds }}
+                        {{ form.recipe }}</dl>
+
+                    <dl><b>{{ form.prep_time.label }}</b>
+                        {{ form.prep_time }}</dl>
+                </div>
+                <div class="col-4">
+                    <dl><b>{{ form.category.label }}</b>
+                        {{ form.category }}</dl>
+
+                    <dl><b>{{ form.type.label }}</b>
+                        {{ wtf.form_field(form.type) }}</dl>
+
+                    <dl><b>{{ form.tags.label }}</b>
+                        {{ form.tags }}</dl>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn blue-gradient btn-block btn-lg text-white">Rezept Hinzufügen</button>
+
+    </form>
+</div>
+{% endblock %}

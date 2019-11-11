@@ -1,0 +1,11 @@
+{% extends "header.html" %}
+{% block body %}
+<div class="container">
+    <p></p>
+    <h2>Alle Rezepte</h2>
+    <p></p>
+    {% for recipe in rec %}
+        <h3 class="recipe-name"> <a href="{{ url_for('recipe', id=recipe['name']) }}" >{{ recipe["name"] }}</a></h3>
+    {% endfor %}
+</div>
+{% endblock %}

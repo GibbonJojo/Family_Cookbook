@@ -1,0 +1,23 @@
+{% extends "header.html" %}
+{% block body %}
+<div class="container">
+    <p></p>
+    <form method="POST" action="" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+
+        <dl>{{ form.email.label }}
+            {{ form.email }}</dl>
+
+        <dl>{{ form.username.label }}
+            {{ form.username }}</dl>
+
+        <dl>{{ form.password.label }}
+            {{ form.password }}</dl>
+
+        <dl>{{ form.valid.label }}
+            {{ form.valid }}</dl>
+        <input type="submit" value="add">
+    </form>
+
+</div>
+{% endblock %}

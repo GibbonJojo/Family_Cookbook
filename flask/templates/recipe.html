@@ -1,0 +1,32 @@
+{% extends "header.html" %}
+{% block body %}
+<div class="container">
+    <p></p>
+    <h2 class="recipe-name">{{ recipe["name"] }}</h2>
+    <button type="submit" class="btn blue-gradient text-white"><a class="text-white" href= '{{ url_for("home") }}'>Auf Einkaufszettel (Not working yet)</a></button>
+    <button type="submit" class="btn blue-gradient text-white"><a class="text-white" href= '{{ url_for("home") }}'>Favorisieren (Not working yet)</a></button>
+    {% if session.username == recipe['creator'] %}
+        <button type="submit" class="btn blue-gradient text-white"><a class="text-white" href= '{{ url_for("edit", id=recipe["name"]) }}'>Editieren</a></button>
+        <button type="submit" class="btn blue-gradient text-white"><a class="text-white" href= '{{ url_for("delete", id=recipe["name"]) }}'>Löschen</a></button>
+    {% endif %}
+    <p></p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2 light-blue lighten-2">
+                {% for ing in recipe["ingredients"] %}
+                    <p style="margin-bottom:1px; width:101%">{{ing}}</p>
+                {% endfor %}
+            </div>
+            <div class="col light-blue lighten-4">
+                {% for rec in recipe["recipe"] %}
+                    <p style="margin-bottom:1px">{{rec}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+
+  flask:
+    build: ./flask
+    container_name: flask_cookbook
+    restart: always
+    environment:
+      - APP_NAME=Cookbook
+    expose:
+      - 8080
+
+  nginx:
+    build: ./nginx
+    container_name: nginx_cookbook
+    restart: always
+    ports:
+      - "80:80"
