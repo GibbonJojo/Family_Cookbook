@@ -20,6 +20,7 @@ def create_db():
 
 
 def create_user(db):
+    # Will be removed when deploying
     jojo = {"username": "Gibbon",
             "password": "admin",
             "email": "johannes.uttecht@gmail.com",
