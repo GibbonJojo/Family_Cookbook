@@ -1,3 +1,5 @@
+### Project is deprecated. A new, but private, repository has been set up. The project right now is deployed to veganvault.de
+
 # Family Cookbook
 
 This Website serves as a recipe collection mainly for myself and my family (in german).
